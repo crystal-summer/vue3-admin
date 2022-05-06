@@ -18,7 +18,15 @@
       <template v-if="app.device !== 'mobile'">
         <header-search id="header-search" class="right-menu-item" />
 
-        <el-tooltip content="源码地址" effect="dark" placement="bottom">
+        <el-tooltip content="github源码地址" effect="dark" placement="bottom">
+          <code-address
+            icon="github"
+            url="https://github.com/crystal-summer/vue3-admin"
+            class="right-menu-item hover-effect"
+          />
+        </el-tooltip>
+
+        <el-tooltip content="gitee源码地址" effect="dark" placement="bottom">
           <code-address class="right-menu-item hover-effect" />
         </el-tooltip>
 

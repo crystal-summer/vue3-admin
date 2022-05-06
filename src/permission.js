@@ -9,7 +9,8 @@ import { isRelogin } from '@/utils/request'
 
 NProgress.configure({ showSpinner: false })
 
-const whiteList = ['/login', '/auth-redirect', '/bind', '/register']
+// 白名单 - 无需登录可以直接打开的页面路径
+const whiteList = ['/login', '/auth-redirect']
 
 router.beforeEach((to, from, next) => {
   NProgress.start()
