@@ -1,0 +1,165 @@
+// 公共基础样式
+
+// 定义字体(px)单位，遍历9-40
+@for $i from 9 through 40 {
+  .h-font-#{$i} {
+    font-size: $i + px;
+  }
+}
+.h-font-extra-small {
+  font-size: 12px;
+}
+.h-font-small {
+  font-size: 13px;
+}
+.h-font-base {
+  font-size: 14px;
+}
+.h-font-medium {
+  font-size: 16px;
+}
+.h-font-large {
+  font-size: 18px;
+}
+.h-font-extra-large {
+  font-size: 20px;
+}
+
+// 定义文字位置
+.h-text-left {
+  text-align: left;
+}
+.h-text-center {
+  text-align: center;
+}
+.h-text-right {
+  text-align: right;
+}
+
+// 定义内外边距，历遍1-80
+@for $i from 0 through 80 {
+  // 只要双数和能被5除尽的数
+  @if $i % 2 == 0 or $i % 5 == 0 {
+    // 得出：h-margin-30或者h-m-30
+    .h-margin-#{$i},
+    .h-m-#{$i} {
+      margin: $i + px !important;
+    }
+
+    // 得出：h-padding-30或者h-p-30
+    .h-padding-#{$i},
+    .h-p-#{$i} {
+      padding: $i + px !important;
+    }
+
+    @each $short, $long in l left, t top, r right, b bottom {
+      // 缩写版，结果如： h-m-l-30
+      // 定义外边距
+      .h-m-#{$short}-#{$i} {
+        margin-#{$long}: $i + px !important;
+      }
+
+      // 定义内边距
+      .h-p-#{$short}-#{$i} {
+        padding-#{$long}: $i + px !important;
+      }
+
+      // 完整版，结果如：h-margin-left-30
+      // 定义外边距
+      .h-margin-#{$long}-#{$i} {
+        margin-#{$long}: $i + px !important;
+      }
+
+      // 定义内边距
+      .h-padding-#{$long}-#{$i} {
+        padding-#{$long}: $i + px !important;
+      }
+    }
+  }
+}
+
+// 定义flex布局
+.h-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.h-flex-wrap {
+  flex-wrap: wrap;
+}
+.h-flex-nowrap {
+  flex-wrap: nowrap;
+}
+.h-col-center {
+  align-items: center;
+}
+.h-col-top {
+  align-items: flex-start;
+}
+.h-col-bottom {
+  align-items: flex-end;
+}
+.h-row-center {
+  justify-content: center;
+}
+.h-row-left {
+  justify-content: flex-start;
+}
+.h-row-right {
+  justify-content: flex-end;
+}
+.h-row-between {
+  justify-content: space-between;
+}
+.h-row-around {
+  justify-content: space-around;
+}
+.h-flex-col {
+  display: flex;
+  flex-direction: column;
+}
+// 定义flex等分
+@for $i from 0 through 12 {
+  .h-flex-#{$i} {
+    flex: $i;
+  }
+}
+
+// 定义定位
+.h-relative,
+.h-rela {
+  position: relative;
+}
+.h-absolute,
+.h-abso {
+  position: absolute;
+}
+
+// 定义文字省略
+.h-line-1 {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.h-line-2 {
+  -webkit-line-clamp: 2;
+}
+.h-line-3 {
+  -webkit-line-clamp: 3;
+}
+.h-line-4 {
+  -webkit-line-clamp: 4;
+}
+.h-line-5 {
+  -webkit-line-clamp: 5;
+}
+.h-line-2,
+.h-line-3,
+.h-line-4,
+.h-line-5 {
+  overflow: hidden;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  display: -webkit-box; // 弹性伸缩盒
+  -webkit-box-orient: vertical; // 设置伸缩盒子元素排列方式
+}

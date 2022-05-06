@@ -1,0 +1,40 @@
+{
+  "name": "vue3-admin",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@element-plus/icons": "^0.0.11",
+    "@element-plus/icons-vue": "^1.1.4",
+    "@vueuse/core": "^8.3.1",
+    "axios": "^0.27.2",
+    "chokidar": "^3.5.3",
+    "element-plus": "^2.1.11",
+    "file-saver": "^2.0.5",
+    "fuse.js": "^6.5.3",
+    "js-cookie": "^3.0.1",
+    "jsencrypt": "^3.2.1",
+    "nprogress": "^0.2.0",
+    "pinia": "^2.0.13",
+    "sass": "^1.51.0",
+    "unplugin-vue-components": "^0.19.3",
+    "vue": "^3.2.25",
+    "vue-router": "4"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^2.3.1",
+    "eslint": "^8.14.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.6.2",
+    "unplugin-auto-import": "^0.7.1",
+    "vite": "^2.9.5",
+    "vite-plugin-compression": "^0.5.1",
+    "vite-plugin-svg-icons": "^2.0.1",
+    "vite-plugin-vue-setup-extend": "^0.4.0"
+  }
+}
